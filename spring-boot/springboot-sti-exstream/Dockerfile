@@ -24,24 +24,7 @@ RUN yum install -y --enablerepo=centosplus \
     mkdir -p /opt/s2i/destination && chmod -R a+rwX /opt/s2i/destination && \
     mkdir -p /opt/app-root/src && chmod -R a+rwX /opt/app-root/src
 
-#Install Exstream
-RUN mkdir -p /opt/exstream && \
-    mkdir -p /opt/exstream/8.0 && \
-    mkdir -p /opt/exstream/pubs && \
-    mkdir -p /YEM_IRS943 && \
-    mkdir -p /TPS_SPRDR1 && \
-    mkdir -p /output
-    
-COPY engine.tar /opt/exstream/
-
-RUN tar -xf /opt/exstream/engine.tar -C /opt/exstream/8.0/ && \
-    mv -f /opt/exstream/8.0/Tar/* /opt/exstream/8.0/ && \
-    rmdir /opt/exstream/8.0/Tar/
-    
-COPY /TPS_SPRDR1/*.pub /opt/exstream/pubs/
-
 ENV PATH=/opt/maven/bin/:/opt/gradle/bin/:$PATH
-
 
 ENV BUILDER_VERSION 1.0
 
