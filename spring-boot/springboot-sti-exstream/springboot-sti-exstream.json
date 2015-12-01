@@ -43,7 +43,7 @@
                "dockerStrategy": {
                   "from": {
                      "kind": "ImageStreamTag",
-                     "name": "springboot-sti:latest"
+                     "name": "centos:centos7"
                   }
                }
             },
@@ -60,10 +60,10 @@
          "kind": "ImageStream",
          "apiVersion": "v1",
          "metadata": {
-            "name": "springboot-sti"
+            "name": "centos"
          },
          "spec": {
-            "dockerImageRepository": "library/springboot-sti:springboot-sti"
+            "dockerImageRepository": "library/centos:centos7"
          }
       },
       {
