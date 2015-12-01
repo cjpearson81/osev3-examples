@@ -27,13 +27,13 @@
                },
                {
                   "type": "ImageChange",
-                  "imageChange": {}
+                  "imageChange": {}d
                }
             ],
             "source": {
                "type": "Git",
                "git": {
-                  "uri": "https://github.com/cpearson/osev3-examples.git",
+                  "uri": "https://github.com/cjpearson81/osev3-examples.git",
                   "ref": "master"
                },
                "contextDir": "spring-boot/springboot-sti"
@@ -120,7 +120,7 @@
             {
                "description": "Git source URI for application",
                "name": "GIT_URI",
-               "value": "https://github.com/cpearson/osev3-examples.git"
+               "value": "https://github.com/cjpearson81/osev3-examples.git"
             },
             {
                "description": "Git branch/tag reference",
@@ -362,7 +362,7 @@
             {
                "description": "Git source URI for application",
                "name": "GIT_URI",
-               "value": "https://github.com/cpearson/osev3-examples.git"
+               "value": "https://github.com/cjpearson81/osev3-examples.git"
             },
             {
                "description": "Git branch/tag reference",
