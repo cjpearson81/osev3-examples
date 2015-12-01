@@ -1,6 +1,8 @@
 #springboot-sti-exstream
 FROM springboot-sti
 
+RUN mkdir -p /opt/exstream
+
 LABEL io.k8s.description="Platform for building Spring Boot applications packaged with exstream" \
       io.k8s.display-name="Spring Boot Exstream builder 1.0" \
       io.openshift.expose-services="8080:http" \
