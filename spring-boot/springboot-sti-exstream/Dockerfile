@@ -34,6 +34,12 @@ RUN mkdir -p /opt/exstream && \
     
 COPY engine.tar /opt/exstream/
 
+RUN tar -xf /opt/exstream/engine.tar -C /opt/exstream/8.0/ && \
+    mv -f /opt/exstream/8.0/Tar/* /opt/exstream/8.0/ && \
+    rmdir /opt/exstream/8.0/Tar/
+    
+COPY /TPS_SPRDR1/*.pub /opt/exstream/pubs/
+
 ENV PATH=/opt/maven/bin/:/opt/gradle/bin/:$PATH
 
 

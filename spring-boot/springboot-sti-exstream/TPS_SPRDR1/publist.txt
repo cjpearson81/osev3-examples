@@ -1,0 +1,1 @@
+/opt/exstream/pubs/TPS_SPRDR1.pub
