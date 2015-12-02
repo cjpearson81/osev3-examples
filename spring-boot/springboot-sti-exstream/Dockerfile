@@ -52,6 +52,14 @@ RUN mkdir -p /opt/exstream && \
     
 COPY engine.tar /opt/exstream/
 
+RUN tar -xf /opt/exstream/engine.tar -C /opt/exstream/8.0/ && \
+    mv -f /opt/exstream/8.0/Tar/* /opt/exstream/8.0/ && \
+    rmdir /opt/exstream/8.0/Tar/
+    
+COPY /TPS_SPRDR1/*.pub /opt/exstream/pubs/
+
+COPY /YEM_IRS943/*.pub /opt/exstream/pubs/ 
+
 RUN chown -R 1001:1001 /opt/openshift
 
 # This default user is created in the openshift/base-centos7 image
