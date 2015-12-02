@@ -1,6 +1,6 @@
 # springboot-sti
 FROM openshift/base-centos7
-MAINTAINER Chris Pearson <cpearson@paychex.com>
+MAINTAINER Jorge Morales <jmorales@redhat.com>
 
 # Install build tools on top of base image
 # Java jdk 8, Maven 3.3, Gradle 2.6
@@ -26,6 +26,7 @@ RUN yum install -y --enablerepo=centosplus \
 
 ENV PATH=/opt/maven/bin/:/opt/gradle/bin/:$PATH
 
+
 ENV BUILDER_VERSION 1.0
 
 LABEL io.k8s.description="Platform for building Spring Boot applications with maven or gradle" \
@@ -39,6 +40,17 @@ LABEL io.k8s.description="Platform for building Spring Boot applications with ma
 
 LABEL io.openshift.s2i.scripts-url=image:///usr/local/sti
 COPY ./.sti/bin/ /usr/local/sti
+
+# Install exstream
+
+RUN mkdir -p /opt/exstream && \
+    mkdir -p /opt/exstream/8.0 && \
+    mkdir -p /opt/exstream/pubs && \
+    mkdir -p /YEM_IRS943 && \
+    mkdir -p /TPS_SPRDR1 && \
+    mkdir -p /output
+    
+COPY engine.tar /opt/exstream/
 
 RUN chown -R 1001:1001 /opt/openshift
 
