@@ -95,7 +95,7 @@
                "sourceStrategy": {
                   "from": {
                      "kind": "ImageStreamTag",
-                     "name": "springboot-sti:latest"
+                     "name": "springboot-sti-exstream:latest"
                   }
                }
             },
