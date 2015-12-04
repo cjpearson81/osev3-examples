@@ -2,7 +2,7 @@
    "kind": "Template",
    "apiVersion": "v1",
    "metadata": {
-      "name": "exstream-rest-service",
+      "name": "exstream-service",
       "annotations": {
          "description": "Exstream Rest Service",
          "iconClass": "icon-jboss",
@@ -17,7 +17,7 @@
       {
          "description": "The name for the application.",
          "name": "APPLICATION_NAME",
-         "value": "exstream-rest-service",
+         "value": "exstream-service",
          "displayName": "Application name",
          "required": true
       },
