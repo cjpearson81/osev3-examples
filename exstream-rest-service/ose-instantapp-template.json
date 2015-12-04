@@ -29,12 +29,6 @@
 
       },
       {
-         "description": "Custom hostname for Rest data service routes.  Leave blank for default hostname, e.g.: <application-name>.<project>.<default-domain-suffix>",
-         "name": "APPLICATION_HOSTNAME_DATA",
-         "displayName": "Application hostname for data component",
-         "required": true
-      },
-      {
          "description": "Git source URI for application",
          "name": "GIT_URI",
          "value": "https://github.com/cjpearson81/osev3-examples.git"
@@ -47,7 +41,7 @@
       {
          "description": "Git Directory for Data repository service",
          "name": "CONTEXT_DIR_WEB",
-         "value": "spring-boot/exstream-rest-service"
+         "value": "exstream-rest-service"
       },
       {
          "description": "Github trigger secret",
