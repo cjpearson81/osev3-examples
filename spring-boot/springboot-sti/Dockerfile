@@ -26,7 +26,6 @@ RUN yum install -y --enablerepo=centosplus \
 
 ENV PATH=/opt/maven/bin/:/opt/gradle/bin/:$PATH
 
-
 ENV BUILDER_VERSION 1.0
 
 LABEL io.k8s.description="Platform for building Spring Boot applications with maven or gradle" \

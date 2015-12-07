@@ -1,4 +1,4 @@
-# springboot-sti
+# springboot-sti-exstream
 FROM openshift/base-centos7
 MAINTAINER Jorge Morales <jmorales@redhat.com>
 
@@ -39,6 +39,8 @@ LABEL io.k8s.description="Platform for building Spring Boot applications with ma
 
 LABEL io.openshift.s2i.scripts-url=image:///usr/local/sti
 COPY ./.sti/bin/ /usr/local/sti
+
+RUN chown -R 1001:1001 /opt/openshift
 
 # This default user is created in the openshift/base-centos7 image
 USER 1001
